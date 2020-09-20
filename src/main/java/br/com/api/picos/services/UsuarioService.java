@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import br.com.api.picos.dao.LoginDao;
-import br.com.api.picos.objetos.Cadastro;
+import br.com.api.picos.objetos.Usuario;
 
 @Service
 public class UsuarioService implements UserDetailsService {
@@ -19,7 +19,7 @@ public class UsuarioService implements UserDetailsService {
 		try {
 			System.out.println("USUARIO USUARIO: " + username);
 			
-			Cadastro usuario = dao.validaAcessoAoApp(username);
+			Usuario usuario = dao.validaAcessoAoApp(username);
 			
 			return User		
 					.builder()

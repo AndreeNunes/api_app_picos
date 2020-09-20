@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import br.com.api.picos.connection.ConnectionFactory;
-import br.com.api.picos.objetos.Cadastro;
+import br.com.api.picos.objetos.Usuario;
 import br.com.api.picos.objetos.Endereco;
 
 public class CadastroDao {
@@ -16,7 +16,7 @@ public class CadastroDao {
 		this.connection = new ConnectionFactory().getConnection();
 	}
 	
-	public void cadastroUsuario(Cadastro c, Endereco e) {
+	public void cadastroUsuario(Usuario c, Endereco e) {
 		String sql = "insert into pc_enderecos (edCep, edRua, edBairro, edCidade, edUf, edNumero, edComplemento)"
 				+ "values (?,?,?,?,?,?,?);";
 		

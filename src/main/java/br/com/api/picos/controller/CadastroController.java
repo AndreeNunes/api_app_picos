@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.gson.Gson;
 
 import br.com.api.picos.dao.CadastroDao;
-import br.com.api.picos.objetos.Cadastro;
+import br.com.api.picos.objetos.Usuario;
 import br.com.api.picos.objetos.Endereco;
 
 @RestController
 @RequestMapping("/picos")
 public class CadastroController {
 	
-	Cadastro c = new Cadastro();
+	Usuario c = new Usuario();
 	Endereco e = new Endereco();
 	private String ultimoCaracterEmail;
 
